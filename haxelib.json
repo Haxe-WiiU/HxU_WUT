@@ -1,0 +1,11 @@
+{
+    "name": "hxwut",
+    "url" : "https://github.com/Slushi-Github/hxWUT",
+    "license": "Apache",
+    "tags": ["native"],
+    "description": "Haxe @:native bindings for WUT toolchain.",
+    "version": "1.0.0",	
+    "contributors": ["Slushi"],
+    "dependencies": {
+    }
+}

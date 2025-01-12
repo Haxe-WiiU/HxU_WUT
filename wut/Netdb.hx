@@ -1,36 +1,72 @@
 package wut;
 
-@:cppInclude("netdb.h") @:include("netdb.h")
+import wut.sys.Socket.Sockaddr;
+import wut.sys.Socket.Socklen_t;
+
+@:cppInclude("netdb.h")
+@:include("netdb.h")
+
 @:native("hostent")
-typedef Hostent = {
-	var h_name:ConstCharPtr;
-	var h_aliases:ConstCharPtr;
-	var h_addrtype:Int;
-	var h_length:Int;
-	var h_addr_list:ConstCharPtr;
+extern enum Hostent {
+	@:native("h_name")
+	h_name;
+
+	@:native("h_aliases")
+	h_aliases;
+
+	@:native("h_addrtype")
+	h_addrtype;
+
+	@:native("h_length")
+	h_length;
+
+	@:native("h_addr_list")
+	h_addr_list;
 }
 
 @:native("servent")
-typedef Servent = {
-	var s_name:ConstCharPtr;
-	var s_aliases:ConstCharPtr;
-	var s_port:Int;
-	var s_proto:ConstCharPtr;
+extern enum Servent {
+	@:native("s_name")
+	s_name;
+
+	@:native("s_aliases")
+	s_aliases;
+
+	@:native("s_port")
+	s_port;
+
+	@:native("s_proto")
+	s_proto;
 }
 
 @:native("addrinfo")
-typedef Addrinfo = {
-	var ai_flags:Int;
-	var ai_family:Int;
-	var ai_socktype:Int;
-	var ai_protocol:Int;
-	var ai_addrlen:Socklen_t;
-	var ai_canonname:ConstCharPtr;
-	var ai_addr:Sockaddr;
-	var ai_next:Addrinfo;
+extern enum Addrinfo {
+	@:native("ai_flags")
+	ai_flags;
+
+	@:native("ai_family")
+	ai_family;
+
+	@:native("ai_socktype")
+	ai_socktype;
+
+	@:native("ai_protocol")
+	ai_protocol;
+
+	@:native("ai_addrlen")
+	ai_addrlen;
+
+	@:native("ai_addr")
+	ai_canonname;
+
+	@:native("ai_canonname")
+	ai_addr;
+
+	@:native("ai_next")
+	ai_next;
 }
 
-class Netdb {
+extern class Netdb {
 	@:native("NETDB_INTERNAL")
 	extern public static var NETDB_INTERNAL:Int;
 
@@ -144,7 +180,6 @@ class Netdb {
 	extern public static var AI_ADDRCONFIG:Int;
 
 	///////
-
 	@:native("gethostbyname")
 	extern public static function gethostbyname(name:ConstCharPtr):Hostent;
 

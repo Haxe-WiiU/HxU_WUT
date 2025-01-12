@@ -1,10 +1,8 @@
-package wut;
-
-import cxx.ConstCharPtr;
+package wut; 
 
 @:cppInclude("wut.h")
 @:include("wut.h")
-class Wut {
+extern class Wut {
 	@:native("WUT_DEBUG_REPORT")
-	extern public static function debugReport(message:ConstCharPtr):Void;
+	extern public static function debugReport(msg:ConstCharPtr):Void;
 }
