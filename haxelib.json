@@ -5,6 +5,7 @@
     "tags": ["native"],
     "description": "Haxe @:native bindings for WUT toolchain.",
     "version": "1.0.0",	
+    "releasenote": "",
     "contributors": ["Slushi"],
     "dependencies": {
     }
