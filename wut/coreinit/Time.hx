@@ -3,13 +3,13 @@ package wut.coreinit;
 @:cppInclude("coreinit/time.h") @:include("coreinit/time.h")
 
 @:native("OSTick")
-extern typedef OSTick = CppType<"int32_t">
+extern typedef OSTick = Int32
 
 @:native("OSTime")
-extern typedef OSTime = CppType<"int64_t">
+extern typedef OSTime = Int64
 
 @:native("OSSecondsToTicks")
-extern typedef OSSecondsToTicks = (val:CppType<"uint64_t">) -> OSTick;
+extern typedef OSSecondsToTicks = (val:UInt64) -> OSTick;
 
 extern class Time {
 	@:native("OSGetTime")

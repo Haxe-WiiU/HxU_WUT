@@ -1,6 +1,6 @@
 package wut.coreinit;
 
-import src.wut.coreinit.Time.OSTime;
+import wut.coreinit.Time.OSTime;
 
 @:cppInclude("coreinit/thread.h") @:include("coreinit/thread.h")
 

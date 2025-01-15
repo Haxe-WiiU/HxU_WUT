@@ -1,7 +1,6 @@
 package wut.vpad;
 
-
-import src.wut.vpadbase.Base.VPADChan;
+import wut.vpadbase.Base.VPADChan;
 
 @:cppInclude("vpad/input.h") @:include("vpad/input.h")
 
@@ -275,7 +274,7 @@ extern class VPAD {
     extern public static function VPADInit():Void;
 
     @:native("VPADRead")
-    extern public static function VPADRead(chan:VPADChan, status:Ptr<VPADStatus>, count:Int):VPADReadError;
+    extern public static function VPADRead(chan:VPADChan, status:Ptr<VPADStatus>, count:UInt32):VPADReadError;
 
     @:native("VPADGetSamplingState")
     extern public static function VPADGetSamplingState(chan:VPADChan):Bool;

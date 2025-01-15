@@ -55,16 +55,16 @@ extern class Socket {
     extern public static function listen(sockfd:Int, backlog:Int):Int;
 
     @:native("recv")
-	extern public static function recv(sockfd:Int, buf:Ptr<Void>, len:Int, flags:Int):Int;
+	extern public static function recv(sockfd:Int, buf:Ptr<Void>, len:SizeT, flags:Int):Int;
 
     @:native("recvfrom")
-    extern public static function recvfrom(sockfd:Int, buf:Ptr<Void>, len:Int, flags:Int, addr:Ptr<Sockaddr>, addrlen:Socklen_t):Int;
+    extern public static function recvfrom(sockfd:Int, buf:Ptr<Void>, len:SizeT, flags:Int, addr:Ptr<Sockaddr>, addrlen:Socklen_t):Int;
 
     @:native("send")
-    extern public static function send(sockfd:Int, buf:Ptr<Void>, len:Int, flags:Int):Int;
+    extern public static function send(sockfd:Int, buf:Ptr<Void>, len:SizeT, flags:Int):Int;
 
     @:native("sendto")
-	extern public static function sendto(sockfd:Int, buf:Const<Ptr<Void>>, len:Int, flags:Int, dest_addr:Ptr<Sockaddr>, addrlen:Socklen_t):Int;
+	extern public static function sendto(sockfd:Int, buf:Const<Ptr<Void>>, len:SizeT, flags:Int, dest_addr:Ptr<Sockaddr>, addrlen:Socklen_t):Int;
 
     @:native("setsockopt")
     extern public static function setsockopt(sockfd:Int, level:Int, optname:Int, optval:Const<Ptr<Void>>, optlen:Socklen_t):Int;

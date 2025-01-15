@@ -29,44 +29,44 @@ extern class Base {
 	extern public static function VPADBASEIsInit():Bool;
 
     @:native("VPADBASEGetMotorOnRemainingCount")
-	extern public static function VPADBASEGetMotorOnRemainingCount(chan:VPADChan):CppType<"int32_t">;
+	extern public static function VPADBASEGetMotorOnRemainingCount(chan:VPADChan):UInt32;
 
     @:native("VPADBASESetMotorOnRemainingCount")
-	extern public static function VPADBASESetMotorOnRemainingCount(chan:VPADChan, counter:CppType<"int32_t">):CppType<"int32_t">;
+	extern public static function VPADBASESetMotorOnRemainingCount(chan:VPADChan, counter:UInt32):UInt32;
 
     @:native("VPADBASESetSensorBarSetting")
-	extern public static function VPADBASESetSensorBarSetting(chan:VPADChan, setting:CppType<"int8_t">):Void;
+	extern public static function VPADBASESetSensorBarSetting(chan:VPADChan, setting:UInt8):Void;
     @:native("VPADBASEGetSensorBarSetting")
-	extern public static function VPADBASEGetSensorBarSetting(chan:VPADChan, outSetting:Ptr<CppType<"int8_t">>):Void;
+	extern public static function VPADBASEGetSensorBarSetting(chan:VPADChan, outSetting:Ptr<Int8>):Void;
 
     @:native("VPADBASEGetHeadphoneStatus")
-	extern public static function VPADBASEGetHeadphoneStatus(chan:VPADChan):CppType<"int32_t">;
+	extern public static function VPADBASEGetHeadphoneStatus(chan:VPADChan):UInt32;
 
     @:native("VPADBASEGetIRCStatus")
 	extern public static function VPADBASEGetIRCStatus(chan:VPADChan):VPADIRCStatusFlags;
 
     @:native("VPADBASEGetGameControllerMode")
-	extern public static function VPADBASEGetGameControllerMode(chan:VPADChan, mode:Ptr<CppType<"int32_t">>):Void;
+	extern public static function VPADBASEGetGameControllerMode(chan:VPADChan, mode:Ptr<UInt32>):Void;
 
     @:native("VPADBASESetGameControllerMode")
-	extern public static function VPADBASESetGameControllerMode(chan:VPADChan, mode:CppType<"int32_t">):Void;
+	extern public static function VPADBASESetGameControllerMode(chan:VPADChan, mode:Int32):Void;
 
     @:native("VPADBASEGetPowerButtonPressStatus")
 	extern public static function VPADBASEGetPowerButtonPressStatus(
         chan:VPADChan,
-        tick:Ptr<Int>,
-        status:Ptr<Int>
+        tick:Ptr<UInt32>,
+        status:Ptr<UInt32>
     ):Void;
 
     @:native("VPADBASESetPowerButtonPressStatus")
 	extern public static function VPADBASESetPowerButtonPressStatus(
         chan:VPADChan,
-        tick:Int,
-        status:Int
+        tick:UInt32,
+        status:UInt32
     ):Void;
 
     @:native("VPADBASESetPowerButtonDisableMode")
-	extern public static function VPADBASESetPowerButtonDisableMode(chan:VPADChan, mode:Int):Void;
+	extern public static function VPADBASESetPowerButtonDisableMode(chan:VPADChan, mode:UInt32):Void;
 
     @:native("VPADBASEClearIRCEvent")
 	extern public static function VPADBASEClearIRCEvent(chan:VPADChan):Void;
