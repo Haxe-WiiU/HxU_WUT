@@ -4,11 +4,14 @@ package wut.whb;
 
 extern class Sdcard {
 	@:native("WHBMountSdCard")
-    extern public static function mountSdCard():Bool;
+    @:include("whb/sdcard.h")
+    extern public static function WHBMountSdCard():Bool;
 
 	@:native("WHBGetSdCardMountPath")
-    extern public static function getSdCardMountPath():Ptr<Char>;
+    @:include("whb/sdcard.h")
+    extern public static function WHBGetSdCardMountPath():Ptr<Char>;
 
     @:native("WHBUnmountSdCard")
-    extern public static function unmountSdCard():Bool;
+    @:include("whb/sdcard.h")
+    extern public static function WHBUnmountSdCard():Bool;
 }

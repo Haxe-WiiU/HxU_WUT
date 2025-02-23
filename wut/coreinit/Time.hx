@@ -8,10 +8,11 @@ extern typedef OSTick = Int32
 @:native("OSTime")
 extern typedef OSTime = Int64
 
-@:native("OSSecondsToTicks")
-extern typedef OSSecondsToTicks = (val:UInt64) -> OSTick;
-
 extern class Time {
+
+    @:native("OSSecondsToTicks")
+    extern public static function OSSecondsToTicks(val:UInt64):OSTick;
+
 	@:native("OSGetTime")
     extern public static function OSGetTime():OSTime;
 

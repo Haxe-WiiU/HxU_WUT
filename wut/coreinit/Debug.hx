@@ -13,6 +13,7 @@ extern enum DisassemblePPCFlags {
 	DISASSEMBLE_PPC_FLAGS_NONE;
 }
 
+@:cppInclude("coreinit/debug.h") @:include("coreinit/debug.h")
 extern class Debug {
 	@:native("OSConsoleWrite")
 	extern public static function OSConsoleWrite(msg:ConstCharPtr, size:UInt32):Void;

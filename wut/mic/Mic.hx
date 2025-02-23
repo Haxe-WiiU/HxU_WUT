@@ -47,8 +47,13 @@ extern typedef MICWorkMemory = {
 
 @:native("MICStatus")
 extern typedef MICStatus = {
+    @:native("state")
     state:Int,
+
+    @:native("availableData")
     availableData:Int,
+
+    @:native("bufferPos")
     bufferPos:Int,
 }
 

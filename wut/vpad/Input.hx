@@ -3,110 +3,111 @@ package wut.vpad;
 import wut.vpadbase.Base.VPADChan;
 
 @:cppInclude("vpad/input.h") @:include("vpad/input.h")
+@:cppInclude("vpadbase/base.h") @:include("vpadbase/base.h")
 
 @:native("VPADButtons")
-extern enum VPADButtons {
+extern enum abstract VPADButtons(Int) {
 	@:native("VPAD_BUTTON_A")
-    VPAD_BUTTON_A;
+    var VPAD_BUTTON_A;
 
 	@:native("VPAD_BUTTON_B")
-    VPAD_BUTTON_B;
+    var VPAD_BUTTON_B;
 
 	@:native("VPAD_BUTTON_X")
-    VPAD_BUTTON_X;
+    var VPAD_BUTTON_X;
 
 	@:native("VPAD_BUTTON_Y")
-    VPAD_BUTTON_Y;
+    var VPAD_BUTTON_Y;
 
 	@:native("VPAD_BUTTON_LEFT")
-	VPAD_BUTTON_LEFT;
+	var VPAD_BUTTON_LEFT;
 
 	@:native("VPAD_BUTTON_RIGHT")
-    VPAD_BUTTON_RIGHT;
+    var VPAD_BUTTON_RIGHT;
 
 	@:native("VPAD_BUTTON_UP")
-	VPAD_BUTTON_UP;
+	var VPAD_BUTTON_UP;
 
 	@:native("VPAD_BUTTON_DOWN")
-    VPAD_BUTTON_DOWN;
+    var VPAD_BUTTON_DOWN;
 
 	@:native("VPAD_BUTTON_ZL")
-	VPAD_BUTTON_ZL;
+	var VPAD_BUTTON_ZL;
 
 	@:native("VPAD_BUTTON_ZR")
-    VPAD_BUTTON_ZR;
+    var VPAD_BUTTON_ZR;
 
 	@:native("VPAD_BUTTON_L")
-	VPAD_BUTTON_L;
+	var VPAD_BUTTON_L;
 
 	@:native("VPAD_BUTTON_R")
-	VPAD_BUTTON_R;
+	var VPAD_BUTTON_R;
 
 	@:native("VPAD_BUTTON_PLUS")
-	VPAD_BUTTON_PLUS;
+	var VPAD_BUTTON_PLUS;
 
 	@:native("VPAD_BUTTON_MINUS")
-	VPAD_BUTTON_MINUS;
+	var VPAD_BUTTON_MINUS;
 
 	@:native("VPAD_BUTTON_HOME")
-    VPAD_BUTTON_HOME;
+    var VPAD_BUTTON_HOME;
 
 	@:native("VPAD_BUTTON_SYNC")
-	VPAD_BUTTON_SYNC;
+	var VPAD_BUTTON_SYNC;
 
 	@:native("VPAD_BUTTON_STICK_R")
-	VPAD_BUTTON_STICK_R;
+	var VPAD_BUTTON_STICK_R;
 
 	@:native("VPAD_BUTTON_STICK_L")
-	VPAD_BUTTON_STICK_L;
+	var VPAD_BUTTON_STICK_L;
 
 	@:native("VPAD_BUTTON_TV")
-	VPAD_BUTTON_TV;
+	var VPAD_BUTTON_TV;
 
 	@:native("VPAD_STICK_R_EMULATION_LEFT")
-	VPAD_STICK_R_EMULATION_LEFT;
+	var VPAD_STICK_R_EMULATION_LEFT;
 
 	@:native("VPAD_STICK_R_EMULATION_RIGHT")
-	VPAD_STICK_R_EMULATION_RIGHT;
+	var VPAD_STICK_R_EMULATION_RIGHT;
 
 	@:native("VPAD_STICK_R_EMULATION_UP")
-	VPAD_STICK_R_EMULATION_UP;
+	var VPAD_STICK_R_EMULATION_UP;
 
 	@:native("VPAD_STICK_R_EMULATION_DOWN")
-	VPAD_STICK_R_EMULATION_DOWN;
+	var VPAD_STICK_R_EMULATION_DOWN;
 
 	@:native("VPAD_STICK_L_EMULATION_LEFT")
-	VPAD_STICK_L_EMULATION_LEFT;
+	var VPAD_STICK_L_EMULATION_LEFT;
 
 	@:native("VPAD_STICK_L_EMULATION_RIGHT")
-	VPAD_STICK_L_EMULATION_RIGHT;
+	var VPAD_STICK_L_EMULATION_RIGHT;
 
 	@:native("VPAD_STICK_L_EMULATION_UP")
-	VPAD_STICK_L_EMULATION_UP;
+	var VPAD_STICK_L_EMULATION_UP;
 
 	@:native("VPAD_STICK_L_EMULATION_DOWN")
-	VPAD_STICK_L_EMULATION_DOWN;
+	var VPAD_STICK_L_EMULATION_DOWN;
 }
 
 @:native("VPADVec2D")
-extern enum VPADVec2D {
+extern class VPADVec2D {
 	@:native("x")
-	x;
+	var x:Float;
 
 	@:native("y")
-	y;
+	var y:Float;
 }
 
 @:native("VPADVec3D")
-extern enum VPADVec3D {
+extern class VPADVec3D {
 	@:native("x")
-	x;
+	var x:Float;
 
 	@:native("y")
-	y;
+	var y:Float;
 
 	@:native("z")
-	z;
+	var z:Float;
 }
 
 @:native("VPADDirection")
@@ -222,7 +223,7 @@ extern enum VPADTouchPadValidity {
 @:native("VPADReadError")
 extern enum VPADReadError {
 	@:native("VPAD_READ_SUCCESS")
-	VPAD_READ_SUCCESS;
+	VPAD_READ_SUCCESS;	
 
 	@:native("VPAD_READ_NO_SAMPLES")
 	VPAD_READ_NO_SAMPLES;
@@ -237,44 +238,80 @@ extern enum VPADReadError {
 	VPAD_READ_UNINITIALIZED;
 }
 
+@:cppInclude("vpad/input.h") @:include("vpad/input.h")
 @:native("VPADStatus")
-extern enum VPADStatus {
+extern class VPADStatus {
 	@:native("hold")
-	hold;
+	public var hold:UInt32;
 
 	@:native("trigger")
-	trigger;
+	public var trigger:UInt32;
 
 	@:native("release")
-	release;
+	public var release:UInt32;
 
 	@:native("leftStick")
-	leftStick;
+	public var leftStick:VPADVec2D;
 
 	@:native("rightStick")
-	rightStick;
+	public var rightStick:VPADVec2D;
 
 	@:native("accelorometer")
-	accelorometer;
+	public var accelorometer:VPADAccStatus;
 
 	@:native("gyro")
-	gyro;
+	public var gyro:VPADVec3D;
 
 	@:native("angle")
-	angle;
+	public var angle:VPADVec3D;
+
+	@:native("error")
+	public var error:UInt8;
 }
+
+// @:cppInclude("vpad/input.h") @:include("vpad/input.h")
+// @:native("VPADStatus")
+// extern typedef VPADStatus = {
+// 	@:native("hold")
+// 	var hold:UInt32;
+
+// 	@:native("trigger")
+// 	var trigger:UInt32;
+
+// 	@:native("release")
+// 	var release:UInt32;
+
+// 	@:native("leftStick")
+// 	var leftStick:VPADVec2D;
+
+// 	@:native("rightStick")
+// 	var rightStick:VPADVec2D;
+
+// 	@:native("accelorometer")
+// 	var accelorometer:VPADAccStatus;
+
+// 	@:native("gyro")
+// 	var gyro:VPADVec3D;
+
+// 	@:native("angle")
+// 	var angle:VPADVec3D;
+
+// 	@:native("error")
+// 	var error:UInt8;
+// }
 
 @:native("VPADSamplingCallback")
 extern class VPADSamplingCallback {
 	
 }
 
+@:cppInclude("vpad/input.h") @:include("vpad/input.h")
 extern class VPAD {
     @:native("VPADInit")
     extern public static function VPADInit():Void;
 
     @:native("VPADRead")
-    extern public static function VPADRead(chan:VPADChan, status:Ptr<VPADStatus>, count:UInt32):VPADReadError;
+    extern public static function VPADRead(chan:VPADChan, buffers:Ptr<VPADStatus>, count:UInt32, error:Ptr<VPADReadError>):UInt32;
 
     @:native("VPADGetSamplingState")
     extern public static function VPADGetSamplingState(chan:VPADChan):Bool;
