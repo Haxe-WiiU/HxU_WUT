@@ -2,9 +2,9 @@
     "name": "hxwut",
     "url" : "https://github.com/Slushi-Github/hxWUT",
     "license": "Apache",
-    "tags": ["native"],
+    "tags": ["native", "wiiu"],
     "description": "Haxe @:native bindings for WUT toolchain.",
-    "version": "1.0.0",	
+    "version": "1.1.0",	
     "releasenote": "",
     "contributors": ["Slushi"],
     "dependencies": {
