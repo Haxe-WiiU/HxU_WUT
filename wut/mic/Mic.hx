@@ -38,23 +38,15 @@ extern enum MICInstance {
 
 @:native("MICWorkMemory")
 extern typedef MICWorkMemory = {
-    @:native("sampleMaxCount")
-    var sampleMaxCount:Int;
-
-    @:native("sampleCount")
+    var sampleMaxCount:SizeT;
     var sampleBuffer:VoidPtr;
 }
 
 @:native("MICStatus")
 extern typedef MICStatus = {
-    @:native("state")
-    state:Int,
-
-    @:native("availableData")
-    availableData:Int,
-
-    @:native("bufferPos")
-    bufferPos:Int,
+    var state:Int;
+    var availableData:Int;
+    var bufferPos:Int;
 }
 
 
