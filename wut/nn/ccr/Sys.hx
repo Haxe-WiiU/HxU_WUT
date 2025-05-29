@@ -4,7 +4,13 @@ package wut.nn.ccr;
 
 @:include("nn/ccr/sys.h")
 @:native("CCRSysLCDMode")
-extern typedef CCRSysLCDMode = Int;
+extern enum CCRSysLCDMode {
+    CCR_SYS_LCD_MODE_BRIGHTNESS_1;
+    CCR_SYS_LCD_MODE_BRIGHTNESS_2;
+    CCR_SYS_LCD_MODE_BRIGHTNESS_3;
+    CCR_SYS_LCD_MODE_BRIGHTNESS_4;
+    CCR_SYS_LCD_MODE_BRIGHTNESS_5;
+}
 
 @:include("nn/ccr/sys.h")
 extern class Sys {
@@ -15,9 +21,9 @@ extern class Sys {
 
     @:include("nn/ccr/sys.h")
     @:native("CCRSysSetCurrentLCDMode")
-    public static function ccrSysSetCurrentLCDMode(mode:CCRSysLCDMode):Int32;
+    public static function CCRSysSetCurrentLCDMode(mode:CCRSysLCDMode):Int32;
 
     @:include("nn/ccr/sys.h")
     @:native("CCRSysGetCurrentLCDMode")
-    public static function ccrSysGetCurrentLCDMode(mode:Ptr<CCRSysLCDMode>):Int32;
+    public static function CCRSysGetCurrentLCDMode(mode:Ptr<CCRSysLCDMode>):Int32;
 }
