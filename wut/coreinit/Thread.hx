@@ -6,5 +6,6 @@ import wut.coreinit.Time.OSTime;
 
 extern class Thread {
 	@:native("OSSleepTicks")
+	@:include("coreinit/thread.h")
 	extern public static function OSSleepTicks(ticks:OSTime):Void;
 }

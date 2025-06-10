@@ -9,58 +9,85 @@ import wut.vpadbase.Base.VPADChan;
 @:native("VPADButtons")
 extern enum VPADButtons {
 	@:native("VPAD_BUTTON_A")
+	@:include("vpad/input.h")
     VPAD_BUTTON_A;
 	@:native("VPAD_BUTTON_B")
+	@:include("vpad/input.h")
     VPAD_BUTTON_B;
 	@:native("VPAD_BUTTON_X")
+	@:include("vpad/input.h")
     VPAD_BUTTON_X;
 	@:native("VPAD_BUTTON_Y")
+	@:include("vpad/input.h")
     VPAD_BUTTON_Y;
 	@:native("VPAD_BUTTON_LEFT")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_LEFT;
 	@:native("VPAD_BUTTON_RIGHT")
+	@:include("vpad/input.h")
     VPAD_BUTTON_RIGHT;
 	@:native("VPAD_BUTTON_UP")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_UP;
 	@:native("VPAD_BUTTON_DOWN")
+	@:include("vpad/input.h")
     VPAD_BUTTON_DOWN;
 	@:native("VPAD_BUTTON_ZL")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_ZL;
 	@:native("VPAD_BUTTON_ZR")
+	@:include("vpad/input.h")
     VPAD_BUTTON_ZR;
 	@:native("VPAD_BUTTON_L")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_L;
 	@:native("VPAD_BUTTON_R")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_R;
 	@:native("VPAD_BUTTON_PLUS")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_PLUS;
 	@:native("VPAD_BUTTON_MINUS")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_MINUS;
 	@:native("VPAD_BUTTON_HOME")
+	@:include("vpad/input.h")
     VPAD_BUTTON_HOME;
 	@:native("VPAD_BUTTON_SYNC")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_SYNC;
 	@:native("VPAD_BUTTON_STICK_R")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_STICK_R;
 	@:native("VPAD_BUTTON_STICK_L")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_STICK_L;
 	@:native("VPAD_BUTTON_TV")
+	@:include("vpad/input.h")
 	VPAD_BUTTON_TV;
 	@:native("VPAD_STICK_R_EMULATION_LEFT")
+	@:include("vpad/input.h")
 	VPAD_STICK_R_EMULATION_LEFT;
 	@:native("VPAD_STICK_R_EMULATION_RIGHT")
+	@:include("vpad/input.h")
 	VPAD_STICK_R_EMULATION_RIGHT;
 	@:native("VPAD_STICK_R_EMULATION_UP")
+	@:include("vpad/input.h")
 	VPAD_STICK_R_EMULATION_UP;
 	@:native("VPAD_STICK_R_EMULATION_DOWN")
+	@:include("vpad/input.h")
 	VPAD_STICK_R_EMULATION_DOWN;
 	@:native("VPAD_STICK_L_EMULATION_LEFT")
+	@:include("vpad/input.h")
 	VPAD_STICK_L_EMULATION_LEFT;
 	@:native("VPAD_STICK_L_EMULATION_RIGHT")
+	@:include("vpad/input.h")
 	VPAD_STICK_L_EMULATION_RIGHT;
 	@:native("VPAD_STICK_L_EMULATION_UP")
+	@:include("vpad/input.h")
 	VPAD_STICK_L_EMULATION_UP;
 	@:native("VPAD_STICK_L_EMULATION_DOWN")
+	@:include("vpad/input.h")
 	VPAD_STICK_L_EMULATION_DOWN;
 }
 

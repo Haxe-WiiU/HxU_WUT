@@ -14,7 +14,6 @@ extern enum CCRSysLCDMode {
 
 @:include("nn/ccr/sys.h")
 extern class Sys {
-
     @:include("nn/ccr/sys.h")
     @:native("CCRSysDRCShutdown")
     public static function ccrSysDRCShutdown():Int32;

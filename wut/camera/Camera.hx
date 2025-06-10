@@ -59,7 +59,7 @@ extern enum CamFps {
     CAMERA_FPS_30;
 }
 
-
+@:include("arpa/inet.h")
 extern class Camera {
     @:native("CAMERA_WIDTH")
     @:include("camera/camera.h")
@@ -88,6 +88,4 @@ extern class Camera {
     @:native("CAMERA_YUV_BUFFER_ALIGNMENT")
     @:include("camera/camera.h")
     extern public static var CAMERA_YUV_BUFFER_ALIGNMENT:Int;
-
-
 }
