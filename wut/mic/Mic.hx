@@ -62,7 +62,6 @@ extern typedef MICStatus = {
     var bufferPos:Int;
 }
 
-
 @:cppInclude("mic/mic.h")
 @:include("mic/mic.h")
 extern class Mic {

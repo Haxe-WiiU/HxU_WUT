@@ -17,6 +17,7 @@ extern typedef In_addr_t = UInt32;
 @:include("netinet/in.h")
 extern typedef In_addr = {
     @:native("s_addr")
+    @:include("netinet/in.h")
     var s_addr:In_addr_t;
 }
 

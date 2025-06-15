@@ -8,9 +8,11 @@ package wut.coreinit;
 @:native("OSScreenID")
 extern enum OSScreenID {
 	@:native("SCREEN_TV")
+	@:include("coreinit/screen.h")
 	SCREEN_TV;
 
 	@:native("SCREEN_DRC")
+	@:include("coreinit/screen.h")
 	SCREEN_DRC;
 }
 
